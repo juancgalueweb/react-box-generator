@@ -5,10 +5,9 @@ function App() {
   const initialProps = {
     bgColor: "",
     width: "",
-    height: "",
   };
   const [input, setInput] = useState(initialProps);
-  const { bgColor, width, height } = input;
+  const { bgColor, width } = input;
 
   const [list, setList] = useState([]);
 
@@ -45,14 +44,6 @@ function App() {
         id="width"
         name="width"
         value={width}
-        onChange={handleOnChange}
-      />
-      <label htmlFor="height">Height</label>
-      <input
-        type="text"
-        id="height"
-        name="height"
-        value={height}
         onChange={handleOnChange}
       />
       <button type="submit">Add</button>
