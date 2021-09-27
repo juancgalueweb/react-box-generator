@@ -12,7 +12,7 @@ export const Boxes = ({ divProps }) => {
             style={{
               backgroundColor: ele.bgColor,
               width: ele.width !== "" ? `${ele.width}px` : `100px`,
-              height: ele.height !== "" ? `${ele.width}px` : `100px`,
+              height: ele.width !== "" ? `${ele.width}px` : `100px`,
             }}
           ></div>
         ))}
