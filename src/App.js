@@ -22,7 +22,7 @@ function App() {
     setInput(initialProps);
   };
   // console.log(input);
-  console.log("Result", list);
+  // console.log("Result", list);
   return (
     <form className="app" onSubmit={handleSubmit}>
       <p className="leftAlign">

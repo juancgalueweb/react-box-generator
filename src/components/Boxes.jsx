@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Boxes = ({ divProps }) => {
-  // console.log(divProps);
+  console.log(divProps);
   return (
     <div className="container">
       {divProps.length > 0 &&
@@ -10,7 +10,8 @@ export const Boxes = ({ divProps }) => {
             key={index}
             className="boxes"
             style={{
-              backgroundColor: ele.bgColor,
+              backgroundColor:
+                ele.bgColor !== "" ? `${ele.bgColor}` : `${"#000"}`,
               width: ele.width !== "" ? `${ele.width}px` : `100px`,
               height: ele.height !== "" ? `${ele.height}px` : `100px`,
             }}
