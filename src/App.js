@@ -5,9 +5,10 @@ function App() {
   const initialProps = {
     bgColor: "",
     width: "",
+    height: "",
   };
   const [input, setInput] = useState(initialProps);
-  const { bgColor, width } = input;
+  const { bgColor, width, height } = input;
 
   const [list, setList] = useState([]);
 
@@ -21,18 +22,18 @@ function App() {
     setInput(initialProps);
   };
   // console.log(input);
-  // console.log("Result", list);
+  console.log("Result", list);
   return (
     <form className="app" onSubmit={handleSubmit}>
       <p className="leftAlign">
         {" "}
-        <b>It is a box generator.</b> Write the name of the color in English. If
-        you don't write anything in the Width and Height field, by default the
-        dimensions of the quadrilateral will be 100px X 100px
+        <b>It is a box generator.</b> Pick a color. If you don't write anything
+        in the Width and Height field, by default the dimensions of the
+        quadrilateral will be 100px X 100px
       </p>
       <label htmlFor="color">Color</label>
       <input
-        type="text"
+        type="color"
         id="color"
         name="bgColor"
         value={bgColor}
@@ -44,6 +45,14 @@ function App() {
         id="width"
         name="width"
         value={width}
+        onChange={handleOnChange}
+      />
+      <label htmlFor="width">Height</label>
+      <input
+        type="text"
+        id="height"
+        name="height"
+        value={height}
         onChange={handleOnChange}
       />
       <button type="submit">Add</button>
